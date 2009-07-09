@@ -52,7 +52,7 @@ include(WPCACHEHOME . 'wp-cache-base.php');
 	 * SP HAX
 	 * If we've called for a delayed cache evaluation, trigger it here
 	 */
-	if(defined('WPCACHELATE') && WPCACHELATE && function_exists('wp_deliver_late_cache') && !is_admin()) {
+	if(wp_cache_is_enabled() && defined('WP_CACHE') && WP_CACHE && defined('WPCACHELATE') && WPCACHELATE && function_exists('wp_deliver_late_cache') && !is_admin()) {
 		add_action('init','wp_deliver_late_cache',999999);
 	}
 	else {
