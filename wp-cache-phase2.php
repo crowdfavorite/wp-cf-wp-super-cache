@@ -370,10 +370,10 @@ function wp_cache_get_ob(&$buffer) {
 				unlink( $blog_cache_dir . $cache_filename );
 				rename( $tmp_wpcache_filename, $blog_cache_dir . $cache_filename );
 			}
-			$buffer .= '<!-- cackekey: '.do_cacheaction( 'wp_cache_key', $_SERVER['HTTP_HOST'].preg_replace('/#.*$/', '', str_replace( '/index.php', '/', $_SERVER['REQUEST_URI'] ) ).$wp_cache_gzip_encoding.wp_cache_get_cookies_values() ).' -->'.PHP_EOL;
-			$buffer .= '<!-- tmpfile: '.$tmp_wpcache_filename.' -->'.PHP_EOL;
-			$buffer .= '<!-- cachedir: '.$blog_cache_dir.' -->'.PHP_EOL;
-			$buffer .= '<!-- cachefilename: '.$cache_filename.' -->'.PHP_EOL;
+			// $buffer .= '<!-- cackekey: '.do_cacheaction( 'wp_cache_key', $_SERVER['HTTP_HOST'].preg_replace('/#.*$/', '', str_replace( '/index.php', '/', $_SERVER['REQUEST_URI'] ) ).$wp_cache_gzip_encoding.wp_cache_get_cookies_values() ).' -->'.PHP_EOL;
+			// $buffer .= '<!-- tmpfile: '.$tmp_wpcache_filename.' -->'.PHP_EOL;
+			// $buffer .= '<!-- cachedir: '.$blog_cache_dir.' -->'.PHP_EOL;
+			// $buffer .= '<!-- cachefilename: '.$cache_filename.' -->'.PHP_EOL;
 		}
 		if( $fr2 ) {
 			fclose($fr2);
